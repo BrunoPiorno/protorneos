@@ -1,8 +1,7 @@
 :root {
-  --primary-color: #40A7E3;
-  --secondary-color: #6c757d;
+  --primary-color: #e0c206;
+  --secondary-color: #000000;
   --white: #ffffff;
-  --black: #000000;
 }
 
 * {
@@ -356,7 +355,7 @@ body {
 
 /* Counter Section */
 .counter-section {
-  background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+  background: var(--secondary-color);
   color: var(--white);
   padding: 4rem 0;
 }
