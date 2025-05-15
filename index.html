@@ -3,9 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+    <link rel="stylesheet" href="styles/main.css">
     <title>Protorneos - Gestión de Torneos Deportivos</title>
     <meta name="description" content="Protorneos - La plataforma líder para la gestión de torneos deportivos. Organiza, administra y sigue tus torneos de manera eficiente.">
-    <link rel="stylesheet" href="styles/main.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
@@ -314,15 +315,139 @@
     </section>
 
     <!-- Testimonials -->
-    <section class="section" id="testimonios">
-        <div class="section__container">
-            <h2 class="section__title">Lo que dicen nuestros usuarios</h2>
-            <div class="testimonials__container">
-                <div class="testimonials__item">
-                    <p>"Excelente plataforma para gestionar torneos"</p>
-                    <cite>- Juan Pérez, Organizador</cite>
+    <section class="testimonials" id="testimonios">
+        <div class="testimonials__container">
+            <div class="testimonials__header">
+                <div class="testimonials__icon">
+                    <i class="fas fa-comments"></i>
                 </div>
-                <!-- More testimonials -->
+                <h2>Lo que dicen nuestros usuarios</h2>
+                <p>Descubre por qué miles de organizadores confían en Protorneos</p>
+            </div>
+
+            <div class="swiper testimonials-slider">
+                <div class="swiper-wrapper">
+                    <!-- Slide 1 -->
+                    <div class="swiper-slide">
+                        <div class="testimonial-card">
+                            <div class="testimonial-card__header">
+                                <div class="testimonial-card__avatar">
+                                    <i class="fas fa-user"></i>
+                                </div>
+                                <div class="testimonial-card__info">
+                                    <h3>Juan Pérez</h3>
+                                    <span>Organizador de Liga Amateur</span>
+                                </div>
+                                <div class="testimonial-card__quote">
+                                    <i class="fas fa-quote-right"></i>
+                                </div>
+                            </div>
+                            <p class="testimonial-card__text">
+                                "Protorneos ha revolucionado la forma en que organizamos nuestros torneos. La gestión de equipos y el seguimiento de partidos nunca había sido tan fácil."
+                            </p>
+                            <div class="testimonial-card__rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Slide 2 -->
+                    <div class="swiper-slide">
+                        <div class="testimonial-card">
+                            <div class="testimonial-card__header">
+                                <div class="testimonial-card__avatar">
+                                    <i class="fas fa-user"></i>
+                                </div>
+                                <div class="testimonial-card__info">
+                                    <h3>María González</h3>
+                                    <span>Árbitra Principal</span>
+                                </div>
+                                <div class="testimonial-card__quote">
+                                    <i class="fas fa-quote-right"></i>
+                                </div>
+                            </div>
+                            <p class="testimonial-card__text">
+                                "Las planillas digitales y el sistema de informes han hecho mi trabajo mucho más eficiente. Es una herramienta indispensable para cualquier árbitro."
+                            </p>
+                            <div class="testimonial-card__rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Slide 3 -->
+                    <div class="swiper-slide">
+                        <div class="testimonial-card">
+                            <div class="testimonial-card__header">
+                                <div class="testimonial-card__avatar">
+                                    <i class="fas fa-user"></i>
+                                </div>
+                                <div class="testimonial-card__info">
+                                    <h3>Carlos Rodríguez</h3>
+                                    <span>Capitán de Equipo</span>
+                                </div>
+                                <div class="testimonial-card__quote">
+                                    <i class="fas fa-quote-right"></i>
+                                </div>
+                            </div>
+                            <p class="testimonial-card__text">
+                                "Como jugador, me encanta poder seguir las estadísticas y el progreso de mi equipo en tiempo real. La app es muy intuitiva y fácil de usar."
+                            </p>
+                            <div class="testimonial-card__rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star-half-alt"></i>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Slide 4 -->
+                    <div class="swiper-slide">
+                        <div class="testimonial-card">
+                            <div class="testimonial-card__header">
+                                <div class="testimonial-card__avatar">
+                                    <i class="fas fa-user"></i>
+                                </div>
+                                <div class="testimonial-card__info">
+                                    <h3>Ana Martínez</h3>
+                                    <span>Directora Deportiva</span>
+                                </div>
+                                <div class="testimonial-card__quote">
+                                    <i class="fas fa-quote-right"></i>
+                                </div>
+                            </div>
+                            <p class="testimonial-card__text">
+                                "La organización de múltiples torneos simultáneos es ahora mucho más sencilla. El sistema de notificaciones y la app móvil son excelentes."
+                            </p>
+                            <div class="testimonial-card__rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="testimonials-slider__navigation">
+                    <!-- Navegación -->
+                    <div class="swiper-button-prev"></div>
+                    <div class="swiper-button-next"></div>
+                </div>
+                
+                <!-- Paginación -->
+                <div class="swiper-pagination"></div>
             </div>
         </div>
     </section>
@@ -405,6 +530,42 @@
     <!-- Scripts -->
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
     <script src="js/main.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="js/faq.js"></script>
+    <script>
+        // Inicializar el slider de testimonios
+        const testimonialSlider = new Swiper('.testimonials-slider', {
+            slidesPerView: 1,
+            spaceBetween: 20,
+            loop: true,
+            centeredSlides: false,
+            autoplay: {
+                delay: 5000,
+                disableOnInteraction: false,
+            },
+            pagination: {
+                el: '.swiper-pagination',
+                clickable: true,
+            },
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+            breakpoints: {
+                640: {
+                    slidesPerView: 1,
+                    spaceBetween: 20,
+                },
+                768: {
+                    slidesPerView: 2,
+                    spaceBetween: 30,
+                },
+                1024: {
+                    slidesPerView: 2.5,
+                    spaceBetween: 30,
+                },
+            },
+        });
+    </script>
 </body>
 </html>
