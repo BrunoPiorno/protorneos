@@ -1,4 +1,27 @@
 $(document).ready(function() {
+
+    // Marquee scroll effect
+    const marqueeContent = document.querySelector('.hero-marquee__content');
+    let lastScrollTop = 0;
+        
+    window.addEventListener('scroll', () => {
+        if (marqueeContent) {
+            const st = window.pageYOffset || document.documentElement.scrollTop;
+            const direction = st > lastScrollTop ? 1 : -1;
+            const scrollDiff = Math.abs(st - lastScrollTop);
+            const speed = Math.min(scrollDiff * 6, 100); // Velocidad aumentada significativamente
+            
+            const currentTransform = getComputedStyle(marqueeContent).transform;
+            const matrix = new DOMMatrix(currentTransform);
+            const currentX = matrix.m41;
+            
+            const newX = currentX - (direction * speed);
+            marqueeContent.style.transform = `translateX(${newX}px)`;
+            
+            lastScrollTop = st <= 0 ? 0 : st;
+        }
+    });
+
     // Animación de contadores
     function animateCounter(element) {
         const target = parseInt($(element).data('target'));
