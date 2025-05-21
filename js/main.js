@@ -1,4 +1,77 @@
 $(document).ready(function() {
+    // Mobile menu toggle
+    const menuToggle = $('.header__menu-toggle');
+    const nav = $('.header__nav');
+    const menuLinks = $('.header__menu a');
+
+    let menuOpen = false;
+
+    function toggleMenu() {
+        menuOpen = !menuOpen;
+        nav.toggleClass('active');
+        
+        const icon = menuToggle.find('i');
+        
+        if (menuOpen) {
+            icon.fadeOut(150, function() {
+                $(this).removeClass('fa-bars').addClass('fa-times').fadeIn(150);
+            });
+        } else {
+            icon.fadeOut(150, function() {
+                $(this).removeClass('fa-times').addClass('fa-bars').fadeIn(150);
+            });
+        }
+
+        if (menuOpen) {
+            $('.header__menu li').each(function(index) {
+                $(this).css({
+                    'transition-delay': `${0.1 + index * 0.1}s`
+                });
+            });
+        } else {
+            $('.header__menu li').css('transition-delay', '0s');
+        }
+
+        $('body').toggleClass('no-scroll', menuOpen);
+    }
+
+    menuToggle.on('click', function(e) {
+        e.stopPropagation();
+        toggleMenu();
+    });
+
+    // Manejar clicks en enlaces del menú
+    menuLinks.on('click', function(e) {
+        e.preventDefault();
+        const target = $($(this).attr('href'));
+        
+        if (menuOpen) {
+            toggleMenu();
+            
+            setTimeout(() => {
+                $('html, body').animate({
+                    scrollTop: target.offset().top - 80 
+                }, 800, 'easeInOutQuart');
+            }, 300);
+        } else {
+            $('html, body').animate({
+                scrollTop: target.offset().top - 80
+            }, 800, 'easeInOutQuart');
+        }
+    });
+
+    $(document).on('click', function(e) {
+        if (menuOpen && !$(e.target).closest('.header__nav, .header__menu-toggle').length) {
+            toggleMenu();
+        }
+    });
+
+    $(window).on('resize', function() {
+        if (window.innerWidth > 768 && menuOpen) {
+            toggleMenu();
+        }
+    });
+
 
     // Marquee scroll effect
     const marqueeContent = document.querySelector('.hero-marquee__content');
@@ -9,7 +82,7 @@ $(document).ready(function() {
             const st = window.pageYOffset || document.documentElement.scrollTop;
             const direction = st > lastScrollTop ? 1 : -1;
             const scrollDiff = Math.abs(st - lastScrollTop);
-            const speed = Math.min(scrollDiff * 6, 100); // Velocidad aumentada significativamente
+            const speed = Math.min(scrollDiff * 6, 100);    
             
             const currentTransform = getComputedStyle(marqueeContent).transform;
             const matrix = new DOMMatrix(currentTransform);
@@ -22,7 +95,6 @@ $(document).ready(function() {
         }
     });
 
-    // Animación de contadores
     function animateCounter(element) {
         const target = parseInt($(element).data('target'));
         const counterValue = $(element).find('.counter-value');
@@ -41,7 +113,6 @@ $(document).ready(function() {
         }, duration / steps);
     }
 
-    // Iniciar animación cuando el elemento sea visible
     function checkCounters() {
         $('.counter-item').each(function() {
             const element = this;
@@ -57,33 +128,13 @@ $(document).ready(function() {
         });
     }
 
-    // Verificar al cargar y al hacer scroll
     checkCounters();
     $(window).on('scroll', checkCounters);
 
-    // Manejo del FAQ acordeón
     $('.faq__question').click(function() {
         const $question = $(this);
         const $answer = $question.next('.faq__answer');
         const $content = $answer.find('p');
 
-        // Cerrar todas las respuestas excepto la actual
-        $('.faq__answer').not($answer).each(function() {
-            $(this).css('height', '0');
-            $(this).removeClass('active');
-        });
-        $('.faq__question').not($question).removeClass('active');
-
-        // Alternar la respuesta actual
-        if ($answer.hasClass('active')) {
-            $answer.css('height', '0');
-            $answer.removeClass('active');
-            $question.removeClass('active');
-        } else {
-            const contentHeight = $content.outerHeight();
-            $answer.css('height', contentHeight + 'px');
-            $answer.addClass('active');
-            $question.addClass('active');
-        }
     });
 });
