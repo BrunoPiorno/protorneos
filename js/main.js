@@ -1,4 +1,7 @@
 $(document).ready(function() {
+    // Actualizar año del copyright
+    $('#current-year').text(new Date().getFullYear());
+
     // Mobile menu toggle
     const menuToggle = $('.header__menu-toggle');
     const nav = $('.header__nav');
@@ -130,6 +133,43 @@ $(document).ready(function() {
 
     checkCounters();
     $(window).on('scroll', checkCounters);
+
+    // Inicializar el slider de testimonios
+    const testimonialSlider = new Swiper('.testimonials-slider', {
+        slidesPerView: 1,
+        spaceBetween: 16,
+        loop: true,
+        autoplay: {
+            delay: 5000,
+            disableOnInteraction: false,
+        },
+        pagination: {
+            el: '.swiper-pagination',
+            clickable: true,
+        },
+        navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+        },
+        breakpoints: {
+            480: {
+                slidesPerView: 1,
+                spaceBetween: 20,
+            },
+            768: {
+                slidesPerView: 2,
+                spaceBetween: 24,
+            },
+            1024: {
+                slidesPerView: 2,
+                spaceBetween: 30,
+            },
+            1200: {
+                slidesPerView: 2,
+                spaceBetween: 32,
+            }
+        },
+    });
 
     $('.faq__question').click(function() {
         const $question = $(this);
