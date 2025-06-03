@@ -85,6 +85,8 @@
         </div>
     </section>
 
+
+
     <div class="hero-marquee">
         <div class="hero-marquee__content">
             <span><i class="fas fa-futbol"></i> GolPopular <i class="fas fa-futbol"></i></span>
@@ -120,6 +122,39 @@
         </div>
     </div>
 
+        <!-- App Video Section -->
+        <section class="app-video-section">
+            <div class="app-video__container">
+                <div class="app-video__content">
+                    <div class="app-video__text fade-in-left">
+                        <h2 class="section__title">¿Cómo funciona ProTorneos?</h2>
+                        <p class="section__description">Mirá este video rápido y descubrí lo fácil que es usar nuestra app</p>
+                        <ul class="app-features-list">
+                            <li class="fade-in-left delay-1"><i class="fas fa-check"></i> Gestión simple e intuitiva</li>
+                            <li class="fade-in-left delay-2"><i class="fas fa-check"></i> Resultados en tiempo real</li>
+                            <li class="fade-in-left delay-3"><i class="fas fa-check"></i> Estadísticas detalladas</li>
+                            <li class="fade-in-left delay-4"><i class="fas fa-check"></i> Comunicación directa con equipos</li>
+                        </ul>
+                    </div>
+                    <div class="app-video__player fade-in-right">
+                        <div class="phone-frame">
+                            <div class="phone-frame__notch"></div>
+                            <div class="phone-frame__buttons">
+                                <div class="volume-button"></div>
+                                <div class="power-button"></div>
+                            </div>
+                            <div class="phone-frame__screen">
+                                <video autoplay loop muted playsinline class="phone-video">
+                                    <source src="assets/videoapp.mp4" type="video/mp4">
+                                    Tu navegador no soporta videos HTML5.
+                                </video>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
         <!-- Características Únicas -->
         <section class="features" id="caracteristicas-unicas">
             <div class="features__container">
@@ -581,15 +616,31 @@
                                 <p>No hay límite, ¡pueden sumarse la cantidad de jugadores que quieran!</p>
                             </div>
                         </details>
+
+                        <details class="faq__item fade-in-left delay-3">
+                            <summary class="faq__question">
+                                <span>¿Cuántos jugadores puedo registrar según el plan que elija?</span>
+                                <i class="fas fa-chevron-down"></i>
+                            </summary>
+                            <div class="faq__answer">
+                                <p>En ProTorneos, la cantidad de jugadores que podés registrar varía según el plan seleccionado:</p>
+                                <ul>
+                                    <li>Plan Básico: 15 jugadores</li>
+                                    <li>Plan Pro: 25 jugadores</li>
+                                    <li>Plan Elite: Ilimitado</li>
+                                </ul>
+                            </div>
+                        </details>
                     </div>
                 </div>
+                
 
                 <div class="faq__category">
                     <h3 class="fade-in-left delay-1">Veedor / Gestor de resultados</h3>
                     <div class="faq__list">
                         <details class="faq__item fade-in-left delay-1">
                             <summary class="faq__question">
-                                <span>¿Cómo funciona el arbitraje digital?</span>
+                                <span>¿Cómo funciona el veedor digital?</span>
                                 <i class="fas fa-chevron-down"></i>
                             </summary>
                             <div class="faq__answer">
@@ -598,7 +649,7 @@
                                     <li>Tener acceso a las planillas de partido digitales</li>
                                     <li>Registro de tarjetas y goles</li>
                                     <li>Generación de Informes post-partido</li>
-                                    <li>Gestión de las estadísticas en tiempo real tarjetas y goles</li>
+                                    <li>Gestión de las estadísticas en tiempo real</li>
                                 </ul>
                             </div>
                         </details>
@@ -753,13 +804,58 @@
                 <!-- Navegación -->
                 <div class="swiper-button-prev"></div>
                 <div class="swiper-button-next"></div>
-                <!-- Paginación -->
-                <div class="swiper-pagination"></div>
+
             </div>
         </div>
     </section>
 
 
+
+    <!-- Videos Section -->
+    <section class="videos-section">
+        <div class="section__container">
+            <div class="section__header fade-in-up">
+                <h2 class="section__title"><img src="assets/balon.png" alt="" class="title-icon">Testimonios de organizadores<img src="assets/balon.png" alt="" class="title-icon"></h2>
+                <p class="section__description">Mira nuestros testimonios más recientes</p>
+            </div>
+            
+            <div class="swiper videos-slider fade-in-up delay-1">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <div class="video-wrapper">
+                            <iframe width="100%" height="315" src="https://www.youtube.com/embed/3F2FH6sULZg" title="YouTube video" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="video-wrapper">
+                            <iframe width="100%" height="315" src="https://www.youtube.com/embed/Ln-dwnOChuw" title="YouTube video" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="video-wrapper">
+                            <iframe width="100%" height="315" src="https://www.youtube.com/embed/hmO76RZ-9lo" title="YouTube video" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="video-wrapper">
+                            <iframe width="100%" height="315" src="https://www.youtube.com/embed/BdUp91gLj1k" title="YouTube video" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="video-wrapper">
+                            <iframe width="100%" height="315" src="https://www.youtube.com/embed/bfmGP_W3pho" title="YouTube video" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Navegación -->
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next"></div>
+                <!-- Paginación -->
+                <div class="swiper-pagination"></div>
+            </div>
+        </div>
+    </section>
 
     <!-- Footer -->
     <footer class="footer" id="contacto">
@@ -767,29 +863,26 @@
             <div class="footer__grid">
                 <!-- Logo y descripción -->
                 <div class="footer__brand">
-                    <a href="#" class="footer__logo">
-                        <img src="assets/logo-footer.png" alt="Protorneos Logo">
-                        </a>
-                        <p class="footer__description">La plataforma líder para la gestión de torneos deportivos. Organiza, administra y sigue tus torneos de manera eficiente.</p>
-                        <div class="footer__social">
-                            <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
-                            <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-                            <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
-                        </div>
+                <a href="#" class="footer__logo">
+                    <img src="assets/logo-footer.png" alt="Protorneos Logo">
+                    </a>
+                    <p class="footer__description">La plataforma líder para la gestión de torneos deportivos. Organiza, administra y sigue tus torneos de manera eficiente.</p>
+                    <div class="footer__social">
+                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
                     </div>
+                </div>
     
-    
-                    <!-- Contacto -->
-                    <div class="footer__links">
-                        <h3>Contacto</h3>
-                        <ul>
-                            <li><i class="far fa-envelope"></i> info@protorneos.com</li>
-                            <li><i class="fas fa-phone"></i> (123) 456-7890</li>
-                            <li><i class="fas fa-map-marker-alt"></i> Buenos Aires, Argentina</li>
-                        </ul>
-                    </div>
-
-
+                <!-- Contacto -->
+                <div class="footer__links">
+                    <h3>Contacto</h3>
+                    <ul>
+                        <li><i class="far fa-envelope"></i> info@protorneos.com</li>
+                        <li><i class="fas fa-phone"></i> (123) 456-7890</li>
+                        <li><i class="fas fa-map-marker-alt"></i> Buenos Aires, Argentina</li>
+                    </ul>
+                </div>
             </div>  
             <div class="footer__bottom">
                 <p class="footer__copyright" id="copyright">© <span id="current-year"></span> Protorneos. Todos los derechos reservados.</p>
